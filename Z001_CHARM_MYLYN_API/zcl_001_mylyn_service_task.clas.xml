@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Mylyn Task Service</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <CLSFINAL>X</CLSFINAL>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Mylyn Task lesen</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Mylyn Task ändern</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>BUILD_ATTACHMENT_URL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Erstellt die URL eines Anhangs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>BUILD_URL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Erstellt die URL eines Änderungsvorgangs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>C_KIND_ADMIN_HEAD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Objektart</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>C_TEXT_GENERAL_NOTE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Text-ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>C_TEXT_OBJECT_ORDER_HEAD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Textobjekt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>GET_BUPA_INFORMATION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnerinformationen lesen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>GET_SERVER_INFORMATION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittelt Host-Informationen des Applikation Servers</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>PREPARE_BAPI_INPUT_CUSTOMER_H</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Customer Header updaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>PREPARE_BAPI_INPUT_TEXT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Texte für BAPI aufbereiten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>QUERY_TASKS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Suchen nach Änderungsvorgängen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>READ_ATTACHMENTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittelt die Anhänge eines Änderungsvorgangs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>READ_TASK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Liest einen Änderungsvorgang aus</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_MYLYN_SERVICE_TASK</CLSNAME>
+     <CMPNAME>UPDATE_TASK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ändert einen Ändeurngsvorgang</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

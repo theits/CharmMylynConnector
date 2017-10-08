@@ -1,0 +1,59 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="TASK" type="ddic:ZS001_CHARM_PROCESS"/>
+  <tt:template>
+    <TASK>
+      <GUID tt:value-ref=".TASK.GUID"/>
+      <ID tt:value-ref=".TASK.ID"/>
+      <DESCRIPTION tt:value-ref=".TASK.DESCRIPTION"/>
+      <CREATED_AT tt:value-ref=".TASK.CREATED_AT"/>
+      <CHANGED_AT tt:value-ref=".TASK.CHANGED_AT"/>
+      <CREATED_BY tt:value-ref=".TASK.CREATED_BY"/>
+      <PROC_TYPE tt:value-ref=".TASK.PROC_TYPE"/>
+      <PRIORITY tt:value-ref=".TASK.PRIORITY"/>
+      <STATUS tt:value-ref=".TASK.STATUS"/>
+      <STATUS_KEY tt:value-ref=".TASK.STATUS_KEY"/>
+      <URL tt:value-ref=".TASK.URL"/>
+      <DEV_PLAN tt:value-ref=".TASK.DEV_PLAN"/>
+      <DEV_ETC tt:value-ref=".TASK.DEV_ETC"/>
+      <PARTNERS>
+        <tt:loop ref=".TASK.PARTNERS">
+          <PARTNER>
+            <PARTNER_FCT_KEY tt:value-ref="PARTNER_FCT_KEY"/>
+            <PARTNER_FUNCTION tt:value-ref="PARTNER_FUNCTION"/>
+            <PARTNER_NAME tt:value-ref="PARTNER_NAME"/>
+          </PARTNER>
+        </tt:loop>
+      </PARTNERS>
+      <COMMENTS>
+        <tt:loop ref=".TASK.COMMENTS">
+          <COMMENT>
+            <AUTHOR tt:value-ref="AUTHOR"/>
+            <CREATION_DATE tt:value-ref="CREATION_DATE"/>
+            <COMMENTS>
+              <tt:loop ref="COMMENTS">
+                <STRING tt:value-ref="$REF"/>
+              </tt:loop>
+            </COMMENTS>
+          </COMMENT>
+        </tt:loop>
+      </COMMENTS>
+      <POSSIBLE_STATI>
+        <tt:loop ref=".TASK.POSSIBLE_STATUS">
+          <POSSIBLE_STATUS>
+            <STATUS_KEY tt:value-ref="STATUS_KEY"/>
+            <STATUS_TEXT tt:value-ref="STATUS_TEXT"/>
+          </POSSIBLE_STATUS>
+        </tt:loop>
+      </POSSIBLE_STATI>
+      <ATTACHMENTS xmlns:xlink="http://www.w3.org/1999/xlink">
+        <tt:loop ref=".TASK.ATTACHMENTS">
+          <ATTACHMENT>
+            <tt:attribute name="xlink:href" value-ref="URL"/>
+            <tt:value ref="ID"/>
+          </ATTACHMENT>
+        </tt:loop>
+      </ATTACHMENTS>
+    </TASK>
+  </tt:template>
+</tt:transform>

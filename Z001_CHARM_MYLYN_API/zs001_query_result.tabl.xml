@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>ZS001_QUERY_RESULT</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Ergebnis einer Query</DDTEXT>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <TABNAME>ZS001_QUERY_RESULT</TABNAME>
+     <FIELDNAME>GUID</FIELDNAME>
+     <POSITION>0001</POSITION>
+     <ROLLNAME>CRMT_OBJECT_GUID32</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <TABNAME>ZS001_QUERY_RESULT</TABNAME>
+     <FIELDNAME>DESCRIPTION</FIELDNAME>
+     <POSITION>0002</POSITION>
+     <ROLLNAME>CRMT_PROCESS_DESCRIPTION</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <TABNAME>ZS001_QUERY_RESULT</TABNAME>
+     <FIELDNAME>URL</FIELDNAME>
+     <POSITION>0003</POSITION>
+     <ROLLNAME>/ASU/URL</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <COMPTYPE>E</COMPTYPE>
+    </DD03P>
+   </DD03P_TABLE>
+   <DD05M_TABLE/>
+   <DD08V_TABLE/>
+   <DD12V/>
+   <DD17V/>
+   <DD35V_TALE/>
+   <DD36M/>
+  </asx:values>
+ </asx:abap>
+</abapGit>

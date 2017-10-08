@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Charm mylyn API</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Vorgang konnte nicht gelesen werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Vorgang konnte nicht gespeichert werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Resource nicht gefunden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Interner Fehler</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Ungültige GUID</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Anhang konnte nicht gelesen werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Aktion fehlgeschlagen: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Aktion nicht gefunden</TEXT>
+    </T100>
+   </T100>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z001_CHARM_MYLYN_API</ARBGB>
+     <STEXT>&amp;1</STEXT>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>Process could not be read</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>Process could not be saved</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>003</MSGNR>
+     <TEXT>Resource not found</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>004</MSGNR>
+     <TEXT>Internal Error</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>Invalid GUID</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>006</MSGNR>
+     <TEXT>Attachment could not be read</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>007</MSGNR>
+     <TEXT>Action failed: &amp;1</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

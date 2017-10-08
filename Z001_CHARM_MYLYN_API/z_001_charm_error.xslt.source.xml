@@ -1,0 +1,9 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="ERROR" type="ddic:ZS001_ERROR_MESSAGE"/>
+  <tt:template>
+    <ERROR>
+      <MESSAGE tt:value-ref=".ERROR.MESSAGE"/>
+    </ERROR>
+  </tt:template>
+</tt:transform>

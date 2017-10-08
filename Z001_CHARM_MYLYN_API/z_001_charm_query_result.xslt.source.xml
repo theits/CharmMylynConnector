@@ -1,0 +1,15 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="TASKS" type="ddic:ZTT_001_QUERY_RESULT"/>
+  <tt:template>
+    <TASKS xmlns:xlink="http://www.w3.org/1999/xlink">
+      <tt:loop ref=".TASKS">
+        <TASK>
+        <tt:attribute name="xlink:href" value-ref="URL"/>
+        <tt:attribute name="description" value-ref="DESCRIPTION"/>
+          <tt:value ref="GUID"/>
+        </TASK>
+      </tt:loop>
+    </TASKS>
+  </tt:template>
+</tt:transform>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_001_CHARM_COMMENT_PARSER</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Comment Parser</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <CLSFINAL>X</CLSFINAL>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <TPOOL/>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_CHARM_COMMENT_PARSER</CLSNAME>
+     <CMPNAME>EXTRACT_CREATION_DATE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Liest das Erstelldatum aus einer Kommentarzeile aus</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_CHARM_COMMENT_PARSER</CLSNAME>
+     <CMPNAME>EXTRACT_USER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Liest Benutzernamen aus einer Kommentarzeile aus</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_CHARM_COMMENT_PARSER</CLSNAME>
+     <CMPNAME>PARSE_COMMENTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konvertiert BAPI Texte</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_001_CHARM_COMMENT_PARSER</CLSNAME>
+     <CMPNAME>SPLIT_COMMENT_FOR_BAPI</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konvertiert Texte in das BAPI-Format</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

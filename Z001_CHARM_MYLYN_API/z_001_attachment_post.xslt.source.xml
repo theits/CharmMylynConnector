@@ -1,0 +1,12 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="ATTACHMENT" type="ddic:ZS001_ATTACHMENT_POST"/>
+  <tt:template>
+    <ATTACHMENT>
+      <NAME tt:value-ref=".ATTACHMENT.NAME"/>
+      <DESCRIPTION tt:value-ref=".ATTACHMENT.DESCRIPTION"/>
+      <MIMETYPE tt:value-ref=".ATTACHMENT.MIMETYPE"/>
+      <PAYLOAD tt:value-ref=".ATTACHMENT.PAYLOAD"/>
+    </ATTACHMENT>
+  </tt:template>
+</tt:transform>

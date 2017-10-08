@@ -1,0 +1,15 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined">
+  <tt:root name="ATTACHMENT" type="ddic:ZS001_ATTACHMENT_META"/>
+  <tt:template>
+    <ATTACHMENT>
+      <ID tt:value-ref=".ATTACHMENT.ID"/>
+      <FILE_NAME tt:value-ref=".ATTACHMENT.FILE_NAME"/>
+      <DESCRIPTION tt:value-ref=".ATTACHMENT.DESCRIPTION"/>
+      <LENGTH tt:value-ref=".ATTACHMENT.LENGTH"/>
+      <MIME_TYPE tt:value-ref=".ATTACHMENT.MIME_TYPE"/>
+      <AUTHOR tt:value-ref=".ATTACHMENT.AUTHOR"/>
+      <CREATION_DATE tt:value-ref=".ATTACHMENT.CREATION_DATE"/>
+    </ATTACHMENT>
+  </tt:template>
+</tt:transform>
