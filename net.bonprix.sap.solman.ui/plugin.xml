@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.mylyn.tasks.core.repositories">
+      <connectorCore
+            class="net.bonprix.sap.solman.core.CharmRepositoryConnector"
+            name="Charm Repository Connector">
+      </connectorCore>
+   </extension>
+   <extension
+         point="org.eclipse.mylyn.tasks.ui.repositories">
+      <connectorUi
+            class="net.bonprix.sap.solman.ui.CharmConnectorUi"
+            name="Charm Connector Ui">
+      </connectorUi>
+   </extension>
+   <extension
+         point="org.eclipse.mylyn.tasks.core.templates">
+      <repository
+            label="charm Example"
+            repositoryKind="SOLMAN"
+            urlRepository="http://solman.net/sap/bc/mylyn">
+      </repository>
+   </extension>
+   <extension
+         point="org.eclipse.mylyn.tasks.ui.editors">
+      <pageFactory
+            class="net.bonprix.sap.solman.ui.CharmTaskEditorPageFactory"
+            id="net.bonprix.sap.solman.ui.pageFactory">
+      </pageFactory>
+   </extension>
+
+</plugin>
