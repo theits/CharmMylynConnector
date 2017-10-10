@@ -14,8 +14,6 @@
       <STATUS tt:value-ref=".TASK.STATUS"/>
       <STATUS_KEY tt:value-ref=".TASK.STATUS_KEY"/>
       <URL tt:value-ref=".TASK.URL"/>
-      <DEV_PLAN tt:value-ref=".TASK.DEV_PLAN"/>
-      <DEV_ETC tt:value-ref=".TASK.DEV_ETC"/>
       <PARTNERS>
         <tt:loop ref=".TASK.PARTNERS">
           <PARTNER>

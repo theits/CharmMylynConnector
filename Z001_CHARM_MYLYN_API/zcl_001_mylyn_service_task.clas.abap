@@ -1,14 +1,13 @@
-*"*ChaRM Mylyn REST API
-*"*Copyright (C) 2017  Torben Heits
-*"*This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
-*"*This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
-*"*You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA 
-
 CLASS zcl_001_mylyn_service_task DEFINITION
   PUBLIC
   INHERITING FROM zcl_001_mylyn_service
   FINAL
   CREATE PUBLIC .
+*"*ChaRM Mylyn REST API
+*"*Copyright (C) 2017  Torben Heits
+*"*This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+*"*This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+*"*You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA
 
   PUBLIC SECTION.
 *"* public components of class ZCL_001_MYLYN_SERVICE_TASK
@@ -110,7 +109,6 @@ private section.
     importing
       !IS_COMMENTS type ZTT_001_COMMENT
       !IV_GUID type CRMT_OBJECT_GUID
-      !IV_ETC type ZDEVETC
     raising
       ZCX_001_MYLYN_EXCEPTION .
   methods UPDATE_STATUS
@@ -239,13 +237,15 @@ CLASS ZCL_001_MYLYN_SERVICE_TASK IMPLEMENTATION.
 
     "fill exporting parameters
     LOOP AT lt_trigger INTO ls_trigger.
-
+      IF ls_trigger->get_ttype( ) <> 'Z1MJ_TO_BE_TESTED_MJ'. "This status should never be set
         ls_action-guid = ls_trigger->read_guid( ).
         ls_action-def  = ls_trigger->get_ttype( ).
         ls_action-text = cl_view_service_ppf=>get_descrp_for_dropdown(
                                               io_trigger = ls_trigger ).
 
         INSERT ls_action INTO TABLE rt_actions.
+      ENDIF.
+
 
     ENDLOOP.
 
@@ -394,22 +394,22 @@ METHOD maintain_order.
 
   ENDIF.
 
-  IF iv_etc IS NOT INITIAL.
-
-    lv_etc = iv_etc.
-
-    prepare_bapi_input_customer_h(
-      EXPORTING
-        iv_value        = lv_etc
-        iv_guid         = iv_guid
-        iv_fieldname    = 'ZZDEVETC'
-      IMPORTING
-        et_bapi_input   = lt_customer_h
-      CHANGING
-        ct_input_fields = lt_input_fields
-    ).
-
-  ENDIF.
+*  IF iv_etc IS NOT INITIAL. "Example for customer fields
+*
+*    lv_etc = iv_etc.
+*
+*    prepare_bapi_input_customer_h(
+*      EXPORTING
+*        iv_value        = lv_etc
+*        iv_guid         = iv_guid
+*        iv_fieldname    = 'ZZDEVETC'
+*      IMPORTING
+*        et_bapi_input   = lt_customer_h
+*      CHANGING
+*        ct_input_fields = lt_input_fields
+*    ).
+*
+*  ENDIF.
 
 
   IF lt_texts IS NOT INITIAL OR lt_customer_h IS NOT INITIAL.
@@ -571,7 +571,6 @@ ENDMETHOD.
              ls_status           LIKE LINE OF lr_status,
              lr_priority         TYPE RANGE OF crmt_priority,
              ls_priority         LIKE LINE OF lr_priority,
-             lt_parameter        TYPE ztt000_rss_parameter,
              lr_guid             TYPE RANGE OF crmt_object_guid,
              ls_guid             LIKE LINE OF lr_guid,
              lt_guids            TYPE crmt_object_guid_tab,
@@ -865,13 +864,6 @@ ENDMETHOD.
       INSERT <s_attachment> INTO TABLE ls_charm_process-attachments.
     ENDLOOP.
 
-    READ TABLE lt_customer_h WITH TABLE KEY guid = iv_guid INTO ls_customer_h.
-    IF sy-subrc = 0.
-      "ls_charm_process-dev_plan = ls_customer_h-zzdevplan.
-      "ls_charm_process-dev_etc = ls_customer_h-zzdevetc.
-    ENDIF.
-
-
 
     "build the url for opening task via web ui
     ls_charm_process-url = build_url( iv_guid ).
@@ -1025,7 +1017,6 @@ ENDMETHOD.
       EXPORTING
         is_comments = is_task-comments
         iv_guid     = lv_guid
-        iv_etc      = is_task-dev_etc
     ).
 
     me->update_status(
