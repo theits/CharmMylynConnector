@@ -77,9 +77,6 @@ public class CharmTaskDataHandler extends AbstractTaskDataHandler {
 		taskAttribute = taskData.getRoot().getAttribute(CharmTaskAttribute.STATUS);
 		task.setStatusKey(taskAttribute.getValue());
 
-		taskAttribute = taskData.getRoot().getAttribute(CharmTaskAttribute.DEV_ETC);
-		task.setDevEtc(Float.valueOf(taskAttribute.getValue()));
-
 		taskAttribute = taskData.getRoot().getAttribute(TaskAttribute.COMMENT_NEW);
 		List<CharmComment> comments = new ArrayList<CharmComment>();
 		List<String> commentLine = new ArrayList<String>();
@@ -152,14 +149,6 @@ public class CharmTaskDataHandler extends AbstractTaskDataHandler {
 		attribute = data.getRoot().createAttribute(CharmTaskAttribute.STATUS);
 		attribute.getMetaData().setKind(TaskAttribute.KIND_DEFAULT).setType(TaskAttribute.TYPE_SINGLE_SELECT)
 				.setReadOnly(false).setLabel("Status");
-
-		attribute = data.getRoot().createAttribute(CharmTaskAttribute.DEV_PLAN);
-		attribute.getMetaData().setKind(TaskAttribute.KIND_DEFAULT).setType(TaskAttribute.TYPE_DOUBLE).setReadOnly(true)
-				.setLabel("Planned effort");
-
-		attribute = data.getRoot().createAttribute(CharmTaskAttribute.DEV_ETC);
-		attribute.getMetaData().setKind(TaskAttribute.KIND_DEFAULT).setType(TaskAttribute.TYPE_DOUBLE)
-				.setReadOnly(false).setLabel("ETC");
 
 		return true;
 	}
@@ -261,10 +250,6 @@ public class CharmTaskDataHandler extends AbstractTaskDataHandler {
 		setAttributeValue(CharmTaskAttribute.GUID, task.getGuid(), taskData);
 
 		setAttributeValue(TaskAttribute.TASK_URL, task.getUrl(), taskData);
-
-		setAttributeValue(CharmTaskAttribute.DEV_PLAN, Float.toString(task.getDevPlan()), taskData);
-
-		setAttributeValue(CharmTaskAttribute.DEV_ETC, Float.toString(task.getDevEtc()), taskData);
 
 		setAttributeValue(CharmTaskAttribute.PROCESS_TYPE, task.getProcessType(), taskData);
 

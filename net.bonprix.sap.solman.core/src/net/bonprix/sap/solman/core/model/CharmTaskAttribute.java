@@ -31,8 +31,4 @@ public final class CharmTaskAttribute {
 	
 	public static final String PROCESS_TYPE = "net.bonprix.sap.solman.process_type"; //$NON-NLS-1$
 
-	public static final String DEV_PLAN = "net.bonprix.sap.solman.dev_plan"; //$NON-NLS-1$
-	
-	public static final String DEV_ETC = "net.bonprix.sap.solman.dev_etc"; //$NON-NLS-1$
-
 }

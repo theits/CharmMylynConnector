@@ -113,7 +113,7 @@ public class CharmRepositoryConnector extends AbstractRepositoryConnector {
 			return taskData;
 		} catch (CharmHttpException e) {
 			throw new CoreException(new Status(IStatus.ERROR, CharmCorePlugin.PLUGIN_ID,
-					NLS.bind("Error getting task: {0}", e.getErrorReason()), e));
+					NLS.bind("Error getting task: {0}", e.getMessage()), e));
 		} catch (ParseException e) {
 			throw new CoreException(new Status(IStatus.ERROR, CharmCorePlugin.PLUGIN_ID,
 					NLS.bind("Error parsing task: {0}", e.getMessage()), e));

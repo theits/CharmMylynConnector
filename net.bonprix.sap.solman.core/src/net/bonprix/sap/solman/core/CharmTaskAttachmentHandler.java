@@ -66,7 +66,7 @@ public class CharmTaskAttachmentHandler extends AbstractTaskAttachmentHandler {
 			return connector.getClient(repository).getAttachment(task, attachmentAttribute, monitor);
 		} catch (CharmException e) {
 			throw new CoreException(new Status(IStatus.ERROR, CharmCorePlugin.PLUGIN_ID,
-					NLS.bind("Downloading attachment failed", task.getTaskId(), e)));
+					NLS.bind("Downloading attachment failed: {0}", e.getMessage(), e)));
 		}
 	}
 
@@ -101,7 +101,7 @@ public class CharmTaskAttachmentHandler extends AbstractTaskAttachmentHandler {
 
 		} catch (IOException | CharmHttpException e) {
 			throw new CoreException(new Status(IStatus.ERROR, CharmCorePlugin.PLUGIN_ID,
-					NLS.bind("Uploading attachment to task {0} failed.", task.getTaskId(), e)));
+					NLS.bind("Uploading attachment failed: {0}", e.getMessage(), e)));
 		} finally {
 			monitor.done();
 		}

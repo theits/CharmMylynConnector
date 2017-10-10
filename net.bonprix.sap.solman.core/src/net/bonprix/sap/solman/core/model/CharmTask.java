@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "TASK")
 @XmlType(propOrder = { "guid", "id", "description", "createdAt", "changedAt", "createdBy", "processType", "priority",
-		"status", "statusKey", "url", "devPlan", "devEtc", "partners", "comments", "possibleStatus", "attachments" })
+		"status", "statusKey", "url", "partners", "comments", "possibleStatus", "attachments" })
 public class CharmTask {
 
 	private String guid;
@@ -41,33 +41,11 @@ public class CharmTask {
 	private String statusKey;
 
 	private String url;
-	
-	private float devPlan;
-	
-	private float devEtc;
 
 	private List<CharmPartner> partners = new ArrayList<CharmPartner>();
 	private List<CharmComment> comments = new ArrayList<CharmComment>();
 	private List<CharmStatus> possibleStatus = new ArrayList<CharmStatus>();
 	private List<CharmAttachmentRef> attachments = new ArrayList<CharmAttachmentRef>();
-
-	@XmlElement(name = "DEV_PLAN", nillable = true, required = true)
-	public float getDevPlan() {
-		return devPlan;
-	}
-
-	public void setDevPlan(float devPlan) {
-		this.devPlan = devPlan;
-	}
-
-	@XmlElement(name = "DEV_ETC", nillable = true, required = true)
-	public float getDevEtc() {
-		return devEtc;
-	}
-
-	public void setDevEtc(float devEtc) {
-		this.devEtc = devEtc;
-	}
 
 	@XmlTransient
 	private List<CharmAttachmentMeta> attachmentsMeta = new ArrayList<CharmAttachmentMeta>();

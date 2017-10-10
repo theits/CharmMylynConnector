@@ -103,9 +103,9 @@ public class CharmClient {
 			task.setAttachmentsMeta(getAttachments(task));
 			return task;
 		} else {
-			CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
-			throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
+			handleError(response);
 		}
+		return null;
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class CharmClient {
 		if (response.getStatus() == 200) {
 			return (CharmQueryResults) response.readEntity(CharmQueryResults.class);
 		} else {
-			CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
-			throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
+			handleError(response);
 		}
+		return null;
 
 	}
 
@@ -170,8 +170,7 @@ public class CharmClient {
 						.readEntity(CharmAttachmentMeta.class);
 				attachments.add(attachmentMeta);
 			} else {
-				CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
-				throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
+				handleError(response);
 			}
 
 		}
@@ -205,9 +204,9 @@ public class CharmClient {
 		if (response.getStatus() == 200) {
 			return (InputStream) response.getEntity();
 		} else {
-			CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
-			throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
+			handleError(response);
 		}
+		return null;
 
 	}
 
@@ -237,8 +236,7 @@ public class CharmClient {
 						.post(Entity.entity(charmAttachment, MediaType.APPLICATION_XML));
 
 		if (response.getStatus() != 200) {
-			CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
-			throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
+			handleError(response);
 		}
 
 	}
@@ -258,10 +256,18 @@ public class CharmClient {
 						.put(Entity.entity(charmTask, MediaType.APPLICATION_XML));
 
 		if (response.getStatus() != 200) {
+			handleError(response);
+		}
+
+	}
+
+	private void handleError(Response response) throws CharmHttpException {
+		if (response.getStatus() == 401) {
+			throw new CharmHttpException(401, "Unauthorized");
+		} else {
 			CharmErrorMessage message = (CharmErrorMessage) response.readEntity(CharmErrorMessage.class);
 			throw new CharmHttpException(response.getStatusInfo().getStatusCode(), message.getMessage());
 		}
-
 	}
 
 }
