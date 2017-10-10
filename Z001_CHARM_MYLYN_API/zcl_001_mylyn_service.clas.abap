@@ -1,13 +1,12 @@
-*"*ChaRM Mylyn REST API
-*"*Copyright (C) 2017  Torben Heits 
-*"*This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
-*"*This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. 
-*"*You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA 
-
 CLASS zcl_001_mylyn_service DEFINITION
   PUBLIC
   ABSTRACT
   CREATE PUBLIC .
+*"*ChaRM Mylyn REST API
+*"*Copyright (C) 2017  Torben Heits
+*"*This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+*"*This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+*"*You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110, USA
 
   PUBLIC SECTION.
 *"* public components of class ZCL_001_MYLYN_SERVICE
@@ -26,9 +25,9 @@ protected section.
   methods PARSE_PARAMETERS .
   methods GET_PARAMETER_VALUE
     importing
-      !IV_NAME type ZE_000_RSS_PARAMETER_NAME
+      !IV_NAME type ZE_001_query_parameter_name
     returning
-      value(RV_VALUE) type ZE_000_RSS_PARAMETER_VALUE .
+      value(RV_VALUE) type ze_001_query_parameter_value .
   PRIVATE SECTION.
 *"* private components of class ZCL_001_MYLYN_SERVICE
 *"* do not include other source files here!!!
@@ -63,7 +62,7 @@ CLASS ZCL_001_MYLYN_SERVICE IMPLEMENTATION.
   METHOD parse_parameters.
 
     DATA: lt_name_value_params TYPE TABLE OF string,
-        ls_parameter TYPE zs000_rss_parameter,
+        ls_parameter TYPE zs001_query_parameter,
         lv_parameter_string TYPE string,
         lv_name_value_string TYPE string.
 
